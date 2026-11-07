@@ -46,7 +46,7 @@ export default function Home() {
         {/* Hero image - optimized with width/height/alt to avoid layout shift */}
         <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius)] border border-[var(--card-border)] bg-white shadow-sm">
           <Image
-            src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1200"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgjBiF_ZSdvLqg-DiQjMwYG7QOao-_tFsT7IGSjG_dEQ&s=10"
             alt="Chapel interior with organ and pews - sacrament meeting"
             width={800}
             height={600}
