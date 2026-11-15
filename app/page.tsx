@@ -37,7 +37,7 @@ export default function Home() {
               href="/meetings/current"
               className="flex h-12 items-center justify-center rounded-full border border-black/[.08] dark:border-white/[.145] px-8 font-medium hover:bg-black/[.04] dark:hover:bg-[#1a1a1a] transition-colors"
             >
-              This Sunday →
+              Current →
             </Link>
           </div>
         </div>
