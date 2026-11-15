@@ -75,4 +75,13 @@ INSERT INTO meetings (
   '{"number":195,"title":"How Great the Wisdom and the Love"}',
   '[{"name":"Stake Choir","topic":"Consider the Lilies","type":"musical-number"},{"name":"President Gimenez","topic":"Strengthening Faith at Home","type":"speaker"}]',
   '{"number":5,"title":"High on the Mountain Top"}', 'Sister Jensen'
+),
+(
+  '2026-11-15', 'regular', 'Bishop Smith', 'Brother Phillips',
+  ARRAY['Ward service activity after meetings'],
+  '{"number":2,"title":"The Spirit of God"}', 'Sister Williams',
+  '[]', false,
+  '{"number":169,"title":"As Now We Take the Sacrament"}',
+  '[{"name":"Sister Emily Brown","topic":"Following the Savior","type":"speaker"},{"name":"Elder Carter","topic":"Serving One Another","type":"speaker"}]',
+  '{"number":31,"title":"O God, Our Help in Ages Past"}', 'Brother Davis'
 );
