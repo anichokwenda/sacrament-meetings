@@ -1,4 +1,5 @@
 import type { SacramentMeeting } from '@/lib/types';
+import PrintButton from '@/components/PrintButton';
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
@@ -17,9 +18,7 @@ export default function MeetingDetail({ meeting }: { meeting: SacramentMeeting }
           <h1 className="text-2xl font-bold text-zinc-900">Sacrament Meeting</h1>
           <p className="text-zinc-500">{meeting.date} • {meeting.meetingType.toUpperCase()}</p>
         </div>
-        <button onClick={() => typeof window !== 'undefined' && window.print()} className="no-print px-4 py-2 bg-zinc-900 text-white rounded-full text-sm hover:bg-black transition">
-          Print
-        </button>
+        <PrintButton />
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-8">
