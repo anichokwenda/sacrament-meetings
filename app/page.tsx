@@ -14,7 +14,6 @@ export default function Home() {
               alt="Next.js logo"
               width={100}
               height={20}
-              priority
             />
             <span className="text-xs px-2 py-1 rounded-full bg-[var(--muted-bg)] text-[var(--muted)]">Ward Planner</span>
           </div>
@@ -46,11 +45,11 @@ export default function Home() {
         {/* Hero image - optimized with width/height/alt to avoid layout shift */}
         <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius)] border border-[var(--card-border)] bg-white shadow-sm">
           <Image
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgjBiF_ZSdvLqg-DiQjMwYG7QOao-_tFsT7IGSjG_dEQ&s=10"
-            alt="Chapel interior with organ and pews - sacrament meeting"
+            src="/images/chapel.svg"
+            alt="Illustration of a chapel interior with pews and a pulpit"
             width={800}
             height={600}
-            priority
+            preload
             className="object-cover w-full h-full"
           />
           <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">

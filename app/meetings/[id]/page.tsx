@@ -1,16 +1,19 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import MeetingDetail from "@/components/MeetingDetail";
-import { meetings } from "@/lib/data";
+import { getMeetingById, getMeetings } from "@/lib/meetings-db";
 
-export default function DetailPage({ 
-  params 
-}: { 
-  params: { id: string } 
+export default async function DetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = params;
-  
-  // String() comparison fixes number vs string id errors
-  const meeting = meetings.find((m) => String(m.id) === String(id));
+  const { id } = await params;
+  const numericId = Number(id);
+  const meeting =
+    Number.isInteger(numericId) && numericId > 0
+      ? getMeetingById(numericId)
+      : null;
 
   if (!meeting) {
     return notFound();
@@ -18,17 +21,16 @@ export default function DetailPage({
 
   return (
     <div className="space-y-4 max-w-3xl mx-auto">
-      <a href="/meetings" className="inline-flex items-center text-sm text-zinc-500 hover:text-zinc-900 transition no-print">
+      <Link href="/meetings" className="inline-flex items-center text-sm text-zinc-500 hover:text-zinc-900 transition no-print">
         ← Back to Meetings
-      </a>
+      </Link>
       <MeetingDetail meeting={meeting} />
     </div>
   );
 }
 
-// Fixes Next.js build: Error: Page "/meetings/[id]" is missing generateStaticParams
 export function generateStaticParams() {
-  return meetings.map((m) => ({
+  return getMeetings().map((m) => ({
     id: String(m.id),
   }));
 }

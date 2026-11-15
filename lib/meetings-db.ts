@@ -114,6 +114,25 @@ const meetings: SacramentMeeting[] = [
     closingHymn: { number: 92, title: 'For the Beauty of the Earth' },
     closingPrayer: 'Brother Kimball',
   },
+  {
+    id: 7,
+    date: '2026-11-15',
+    meetingType: 'regular',
+    presiding: 'Bishop Smith',
+    conducting: 'Brother Phillips',
+    announcements: ['Ward service activity after meetings'],
+    openingHymn: { number: 2, title: 'The Spirit of God' },
+    openingPrayer: 'Sister Williams',
+    wardBusiness: [],
+    stakeBusiness: false,
+    sacramentHymn: { number: 169, title: 'As Now We Take the Sacrament' },
+    speakers: [
+      { name: 'Sister Emily Brown', topic: 'Following the Savior', type: 'speaker' },
+      { name: 'Elder Carter', topic: 'Serving One Another', type: 'speaker' },
+    ],
+    closingHymn: { number: 31, title: 'O God, Our Help in Ages Past' },
+    closingPrayer: 'Brother Davis',
+  },
 ];
 
 // Required query functions - temporary scaffold

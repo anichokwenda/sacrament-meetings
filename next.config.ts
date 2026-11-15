@@ -4,14 +4,6 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'encrypted-tbn0.gstatic.com',
-      },
-    ],
-  },
 };
 
 export default nextConfig;
