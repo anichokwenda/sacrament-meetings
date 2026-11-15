@@ -3,7 +3,7 @@ import { getMeetings } from "@/lib/meetings-db";
 
 export const dynamic = "force-dynamic";
 
-export default function CurrentMeetingPage() {
+export default async function CurrentMeetingPage() {
   const today = new Date();
   const sunday = new Date(
     today.getFullYear(),
@@ -16,7 +16,7 @@ export default function CurrentMeetingPage() {
     String(sunday.getDate()).padStart(2, "0"),
   ].join("-");
 
-  const meetingsForSunday = getMeetings(isoDate);
+  const meetingsForSunday = await getMeetings(isoDate);
 
   if (meetingsForSunday.length > 0) {
     redirect(`/meetings/${meetingsForSunday[0].id}`);

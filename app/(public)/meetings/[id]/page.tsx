@@ -12,7 +12,7 @@ export default async function DetailPage({
   const numericId = Number(id);
   const meeting =
     Number.isInteger(numericId) && numericId > 0
-      ? getMeetingById(numericId)
+      ? await getMeetingById(numericId)
       : null;
 
   if (!meeting) {
@@ -29,8 +29,9 @@ export default async function DetailPage({
   );
 }
 
-export function generateStaticParams() {
-  return getMeetings().map((m) => ({
+export async function generateStaticParams() {
+  const meetings = await getMeetings();
+  return meetings.map((m) => ({
     id: String(m.id),
   }));
 }

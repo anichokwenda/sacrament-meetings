@@ -70,7 +70,7 @@ export default function Home() {
         </div>
         <div className="p-5 rounded-[var(--radius)] border border-[var(--card-border)] bg-[var(--card)]">
           <p className="text-2xl font-bold">Fast</p>
-          <p className="text-sm text-[var(--muted)]">In-memory scaffold</p>
+          <p className="text-sm text-[var(--muted)]">Database-backed</p>
         </div>
       </section>
     </div>

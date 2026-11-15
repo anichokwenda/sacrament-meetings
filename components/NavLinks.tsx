@@ -11,6 +11,10 @@ const links = [
 export default function NavLinks() {
   const pathname = usePathname();
 
+  if (pathname === '/meetings' || pathname.startsWith('/meetings/')) {
+    return null;
+  }
+
   return (
     <nav className="flex items-center gap-1 rounded-full bg-zinc-100 p-1">
       {links.map((link) => {
